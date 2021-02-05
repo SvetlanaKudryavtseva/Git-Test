@@ -4,11 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Test</title>
+    <link rel="stylesheet" href="style.css">
+    <title>JS in action</title>
 </head>
 
 <body>
-    Git Test in VS Code.
+    <h1>Sandbox for my JS code learning</h1>
+    <h2>1. Git Test in VS Code.</h2>
+    <h2>2. Simple JS Slider.</h2>
+    <div class="container">
+        <div class="slider">
+            <div class="slider__content">
+                <div class="slider__item">
+                    <img src="./images/1.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__item">
+                    <img src="./images/2.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__item">
+                    <img src="./images/3.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__item">
+                    <img src="./images/4.jpg" alt="" class="slider__img">
+                </div>
+            </div>
+        </div>
+        <button class="slider__button">Prev</button>
+        <button class="slider__button">Next</button>
+
+    </div>
+    <h2>2. Simple JS Slider-2.</h2>
+    <!-- Main slider block -->
+    <div class="slider2">
+        <!-- The first slide -->
+        <div class="slider2__item">
+            <img class="slider2__img" src="./images/1.jpg">
+        </div>
+        <!-- The second slide -->
+        <div class="slider2__item">
+            <img class="slider2__img" src="./images/2.jpg">
+        </div>
+        <!-- The third slide -->
+        <div class="slider2__item">
+            <img class="slider2__img" src="./images/3.jpg">
+        </div>
+        <!-- Arrow buttons -->
+        <button class="slider2__button button__prev" onclick="previousSlide()">&#10094;</button>
+        <button class="slider2__button button__next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <script scr="script.js"></script>
 </body>
 
 </html>
