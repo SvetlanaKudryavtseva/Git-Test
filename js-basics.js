@@ -1,5 +1,4 @@
-// egghead --- Learn ES6 (ECMAScript 2015) --- 01. arrow functions
-/*
+// egghead --- Learn ES6 (ECMAScript 2015) --- 01. arrow functions/*
 var createGreeting = function(message, name) {
     return message + name;
 }
@@ -42,7 +41,7 @@ console.log(stars);
 for (let i = 0; i < stars.length; i++) {
     stars[i].innerHTML = '*****';
 }
-*/
+
 document.querySelector('.button-for-radio').onclick = () => {
     let r = document.querySelectorAll('input[type="radio"]');
     console.log(r);
