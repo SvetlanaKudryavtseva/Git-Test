@@ -43,11 +43,12 @@ for (let i = 0; i < stars.length; i++) {
 }
 
 document.querySelector('.button-for-radio').onclick = () => {
-    let r = document.querySelectorAll('input[type="radio"]');
-    console.log(r);
-    for (i = 0; i < r.length; i++) {
-        if (r[i].checked) {
-            console.log(r[i].value);
+        let r = document.querySelectorAll('input[type="radio"]');
+        console.log(r);
+        for (i = 0; i < r.length; i++) {
+            if (r[i].checked) {
+                console.log(r[i].value);
+            }
         }
     }
-}
+    // itgid.info --- JavaScript v. 2.0 --- 00. Тема
