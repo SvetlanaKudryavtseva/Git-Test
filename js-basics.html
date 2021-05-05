@@ -12,7 +12,7 @@
     <h2>Arrow Functions</h2>
     <h3 class="inner">Получение данных</h3>
     <p><b>I - Первоначально необходимо получить данные = какой-либо элемент, с которым мы будем работать</b></p>
-    <p>Если каждый раз обращаться к элементам через объект document, возрастает нагрузка, поэтому:
+    <p>Но, если каждый раз обращаться к элементам через объект document, возрастает нагрузка, поэтому:
         <ul>
             <li>Создаем переменную</li>
             <li>Сохраняем в нее элемент, например через document.querySelector</li>
@@ -32,6 +32,84 @@
     <div><input type="radio" name="r" value="2">Ha-ha</div>
     <div><input type="radio" name="r" value="3">He-he</div>
     <button class="button-for-radio">Push</button>
+
+    <h2>[loftschool] Комплексное обучение JavaScript</h2>
+    <h3>03. Функции</h3>
+    <h4>03.1_Простая функция</h4>
+    <p>
+        <code>
+            function fn(a, b) {<br>
+                console.log(a+b);<br>
+            }<br>
+            fn(1, 4); // выведет в консоль результат <strong>5</strong><br>
+        </code>
+    </p>
+    <h4>03.2_Функция, содержащая объект arguments</h4>
+    <p>Для того, чтобы было возможно использовать большое кол-во аргументов, тем более если нам заранее не известно какое кол-во, необходимо использовать объект arguments.</p>
+    <p><i>Объект arguments — это подобный массиву объект, который содержит аргументы, переданные в функцию. Примечание: Если вы пишите ES6-совместимый код, то лучше использовать rest параметры. Примечание: "Подобный массиву" означает, что arguments имеет свойство length , а элементы индексируются начиная с нуля. (ссылка на определение <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments">https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments)</a></i></p>
+    <p>
+        <code>
+            function fn_arg(a, b) {<br>
+                console.log(arguments);<br>
+            }<br>
+            fn_arg(2, 4, 5, 10, 40); // выведет в консоль результат <strong>{'0': 2, '0': 4, '0': 5, '0': 10, '0': 40, }</strong><br>
+        </code>
+    </p>
+    <p>Таким образом, используя объект arguments мы получили доступ ко всем переданным в функцию параметрам</p>
+    <p>И так, как это подобный массиву объект, мы можем его перебрать используя цикл for и свойство length</p>
+    <p>
+        <code>
+            function fn_arg() {<br>
+            for (i=0; i &lt; arguments.length; i++){<br>
+                console.log(arguments[i]);<br>
+            }<br>
+            }<br>
+            fn_arg(3, 2, 5, 5, 40); // выведет в консоль результат <strong>{'0': 3, '0': 4, '0': 5, '0': 10, '0': 40, }</strong><br>
+        </code>
+    </p>
+    <p><strong>Считаем сумму всех аргументов</strong></p>
+    <p>
+        <code>
+            function fn_sum() {<br>
+                let sum =  0;<br>
+                for (let i=0; i &lt; arguments.length; i++){<br>
+                    sum += arguments[i];<br>
+                }<br>
+                console.log(sum);<br>
+            }<br>
+            fn_sum(3, 2, 5, 5, 40); // выведет в консоль результат суммы<strong></strong><br>
+        </code>
+    </p>
+    <p><strong>Если не нужно выводить сумму на экран, и мы просто хотим получить доступ к результату функции</strong>
+    </p>
+    <p>
+        <code>
+            function fn_return() {<br>
+                let sum =  0;<br>
+                for (let i=0; i &lt; arguments.length; i++){<br>
+                    sum += arguments[i];<br>
+                }<br>
+                return sum; // напишем ключивое слово <strong>return</strong><br>
+            }<br>
+            
+            var result = fn_return(5, 5, 40); // Чтобы использовать в дальнейшем коде полученный результат, <strong>необходимо объявить переменную, дать ей название и ПРИСВОИТЬ ЕЙ ВЫЗОВ ФУНКЦИИ = не саму функцию, а именно вызов функции</strong>. Т.е. мы вызвали функцию и результат этой функции поместили в переменную.<br>
+console.log(result); // выведет в консоль результат суммы равный <strong>50</strong><br>
+console.log(result); // выведет в консоль результат суммы равный <strong>50</strong><br>
+
+        </code>
+    </p>
+    <h2>[ItGid] JavaScript v.2.0</h2>
+    <h3>07. Функции и все о них</h3>
+    <h4>07.1_Простая функция</h4>
+    <code>
+        function fn_one() {<br>
+            console.log('work');<br>
+        }<br>
+        fn_one();<br>
+    </code>
+    <p>Можно добавить кнопку и вызывать функцию по ее нажатию</p>
+    <button class="fn-1">При нажатии сработает фукция fn_1</button>
+
 
     <script src="js-basics.js"></script>
 </body>
