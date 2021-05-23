@@ -55,11 +55,11 @@ document.querySelector('.button-for-radio').onclick = () => {
 // [loftschool] Комплексное обучение JavaScript
 // 03. Функции
 // 03.1_Простая функция
-function fn(a, b) {
+function fn_simple(a, b) {
     let c = a + b;
     console.log(`[loftschool]_03.1 ${c}`);
 }
-fn(1, 4);
+fn_simple(1, 4);
 // 03.2_Функция, содержащая объект arguments
 function fn_arg(arg1, arg2) {
     console.log(arguments);
@@ -78,7 +78,7 @@ function fn_sum() {
     for (let i = 0; i < arguments.length; i++) {
         sum += arguments[i];
     }
-    console.log(sum);
+    console.log('Сумма всех arguments равна: ' + sum);
 }
 fn_sum(3, 2, 5, 5, 40); // выведет в консоль  сумму 55
 
@@ -90,10 +90,26 @@ function fn_return() {
     }
     return sum;
 }
-var result = fn_return(5, 5, 40);
-console.log(result);
-console.log(result);
+var result_return = fn_return(5, 5, 40);
+console.log('Return,  возвращает результат функции (чтобы его использовать, его необходимо поместить в переменную): ' + result_return);
+console.log('Return,  возвращает результат функции (чтобы его использовать, его необходимо поместить в переменную): ' + result_return);
 
+// 03.4_Типы объявления функций
+
+// 1-й тип: Declaration - объявление
+function fn_declar(a, b) {
+    return a + b;
+}
+// 2-й тип: Expression  - выражение = функция в контексте объявления переменной
+let fn_express = function fn_expess(a, b) {
+    return a + b;
+};
+
+let result_declar = fn_declar(2, 2);
+let result_express = fn_express(2, 2);
+
+console.log('1-й тип: Declaration - объявление: ' + result_declar);
+console.log('2-й тип: Expression  - выражение: ' + result_express);
 
 
 
